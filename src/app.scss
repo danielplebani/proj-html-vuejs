@@ -1,3 +1,5 @@
 @use "../node_modules/bootstrap/scss/bootstrap.scss";
 
-@use './variations/AppColors.scss' as *;
+#AppHeader{
+    height: 15vh;
+}
