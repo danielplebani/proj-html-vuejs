@@ -7,12 +7,14 @@ export default{
 <template>
     <div class="d-flex align-items-center">
         <div class="col-7">
-            <div id="ImageBackground">
-                <div id="greenImage"></div>
-
-                <img src="../assets/img/immagine-mancante1.avif" class="cut-image">
-            </div>
+            <img src="../assets/img/123.jpeg" id="original-img-bg">
+            <img src="../assets/img/123.jpeg" id="cut-img-bg">
             
+            <div id="original-greenScreen"></div>
+            <div id="cut-greenScreen"></div>
+
+            <div id="original-img"><img src="../assets/img/immagine-mancante1.avif"></div>
+            <div id="cut-img"><img src="../assets/img/immagine-mancante1.avif"></div>
         </div>
 
         <div style="padding-right: 7rem;" class="col-5">
@@ -35,43 +37,79 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
 .col-7{
-    align-self: self-start;
     position: relative;
+    align-self: self-start;
 
-    #ImageBackground{
-        width: 45rem;
-        height: 30rem;
-        border-radius: 30px;
-        background-image: url(../assets/img/123.jpeg);
-        background-size: cover;
-        background-repeat: no-repeat;
+    #original-img-bg{
         position: absolute;
-        left: -90px;
-        
-
-       #greenImage{
-          height: 100%;
-          border-radius: 30px;
-          background: rgba(153, 225, 94, 0.75);
-          background: linear-gradient(106deg, rgba(152,225,94,0.75) 2%, rgba(142,225,99,0.75) 18%, rgba(96,222,121,0.75) 41%, rgba(64,220,135,0.75) 57%, rgba(29,219,153,0.75) 85%, rgba(0,217,166,0.75));  
-        } 
-
-        img{
-            position: absolute;
-            top: 5.5rem;
-            left: 12rem;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-        }  
+        left: -100px;
+        border-radius: 35px;
+        clip-path: polygon(0 0, 100% 0, 100% 70.5%, 0 70.5%);
     }
 
-    
+    #cut-img-bg{
+        position: absolute;
+        left: -130px;
+        border-radius: 35px;
+        clip-path: polygon(0 70.5%, 100% 70.5%, 100% 100%, 0 100%);
+    }
+
+    #original-greenScreen{
+        width: 608px;
+        height: 406px;
+        clip-path: polygon(0 0, 100% 0, 100% 70.5%, 0 70.5%);
+        position: absolute;
+        left: -100px;
+        border-radius: 35px;
+        background: rgba(153, 225, 94, 0.75);
+        background: linear-gradient(106deg, rgba(152,225,94,0.75) 2%, rgba(142,225,99,0.75) 18%, rgba(96,222,121,0.75) 41%, rgba(64,220,135,0.75) 57%, rgba(29,219,153,0.75) 85%, rgba(0,217,166,0.75)); 
+    }
+
+    #cut-greenScreen{
+        width: 608px;
+        height: 406px;
+        clip-path: polygon(0 70.5%, 100% 70.5%, 100% 100%, 0 100%);
+        position: absolute;
+        left: -130px;
+        border-radius: 35px;
+        background: rgba(153, 225, 94, 0.75);
+        background: linear-gradient(106deg, rgba(152,225,94,0.75) 2%, rgba(142,225,99,0.75) 18%, rgba(96,222,121,0.75) 41%, rgba(64,220,135,0.75) 57%, rgba(29,219,153,0.75) 85%, rgba(0,217,166,0.75)); 
+    }
+
+    #original-img{
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+        position: absolute;
+        top: 3rem;
+        left: 4rem;
+        padding: 30px;
+
+        img{
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+        
+    }
+
+    #cut-img{
+        clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+        position: absolute;
+        top: 2.95rem;
+        left: 2.5rem;
+        padding: 30px;
+
+        img{
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+
 }
 
-
 .col-5{
-    padding: 5rem 0;
+    padding: 4rem 0;
     h2{
         font-family: 'Rubik', sans-serif;
         font-size: 50px;
