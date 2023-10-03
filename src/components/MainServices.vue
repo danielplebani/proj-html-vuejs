@@ -5,16 +5,16 @@ export default{
 </script>
 
 <template>
-    <div class="d-flex">
+    <div class="d-flex align-items-center">
       <div class="col-5">
-        <h1>
+        <h2>
             We Are Here To <br>
             Make Your <span>Website</span> <br> 
             Look More <span>Elegant</span> <br>
             And Stylish!
-        </h1>
+        </h2>
 
-        <div class="d-flex my-5">
+        <div class="d-flex mt-4 mb-5">
             <div id="separator1" class="me-2"></div>
             <div id="separator2"></div>
         </div>
@@ -24,31 +24,44 @@ export default{
 
       <div class="col-7 d-flex justify-content-between flex-wrap gap-3">
         <div class="card">
-            <img src="../assets/img/111.png" alt="speed test">
+            <img src="../assets/img/23.png">
+            <h4>Speed Optimizazion</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
         </div>
 
-        <div class="card"></div>
+        <div class="card">
+            <img src="../assets/img/24.png">
+            <h4>Cloud Solutions</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
+        </div>
 
-        <div class="card"></div>
+        <div class="card">
+            <img src="../assets/img/25.png">
+            <h4>Website Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
+        </div>
 
-        <div class="card"></div>
+        <div class="card">
+            <img src="../assets/img/26.png">
+            <h4>Online Marketing</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
+        </div>
       </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
 .col-5{
-    padding-top: 4rem;
+    padding: 3rem 0;
 }
 
-h1{
+h2{
     font-family: 'Rubik', sans-serif;
-    font-size: 60px;
+    font-size: 50px;
 
     span{
         font-family: 'Rubik', sans-serif;
-        font-size: 60px;
+        font-size: 50px;
         color: #00d9a6;
     }
 }
@@ -80,13 +93,25 @@ button{
 
 .card{
     width: 49%;
-    height: 55%;
+    height: 15rem;
     border: none;
-    box-shadow: 0 0 15px rgba(128, 128, 128, 0.288);
+    box-shadow: 0 0 30px rgba(128, 128, 128, 0.241);
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     img{
-        width: 10%;
+        width: 15%;
+    }
+
+    h4{
+        font-family: 'Roboto', sans-serif;
+    }
+
+    p{
+        font-size: small;
+        color: gray;
     }
 }
 </style>

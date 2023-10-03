@@ -37,7 +37,6 @@ export default{
 
 <style lang="scss" scoped>
 #container{
-    height: 130vh;
     background-image: url(../assets/img/Group-36-2x.png);
     background-size: 165vh;
     background-repeat: no-repeat;
