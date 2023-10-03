@@ -48,6 +48,10 @@ export default{
     height: 25%;
     padding: 0 80px;
     font-size: small;
+
+    i{
+        cursor: pointer;
+    }
 }
 
 #HeaderBody{
@@ -62,6 +66,7 @@ export default{
         font-size: small;
         color: rgb(53, 51, 51);
         font-family: 'AR One Sans', sans-serif;
+        cursor: pointer;
     }
 
     button{
@@ -76,6 +81,7 @@ export default{
 
     i{
         color: #00d9a6;
+        cursor: pointer;
     }
 }
 </style>
