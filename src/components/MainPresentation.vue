@@ -1,13 +1,19 @@
 <script>
 export default{
     name: 'MainPresentation',
+
+    data(){
+        return{
+            mouseOver: true,
+        }
+    }
 }
 </script>
 
 <template>
     <div>
         <div id="container">
-            <span><strong>17 YEARS OF EXPERIENCE</strong></span>
+            <span id="experience"><strong>17 YEARS OF EXPERIENCE</strong></span>
 
             <h1 class="mt-1"><strong>We Are a <br> Web Design <span>Agency</span></strong></h1>
 
@@ -18,7 +24,10 @@ export default{
 
             <p>Far far dolor sit amet consectetur adipisicing elit. Nobis, ducimus eligendi? Eligendi distinctio adipisci, provident fugiat temporibus, impedit quasi labore soluta consequuntur sed reiciendis qui, nisi exercitationem consectetur.</p>
 
-            <button class="blackButton my-5">READ MORE</button>
+            <button class="blackButton my-5" @mouseenter="mouseOver = false"  @mouseleave="mouseOver = true">
+                <span v-if="mouseOver">READ MORE</span>
+                <span v-if="mouseOver == false">VIEW ALL</span>
+            </button>
 
             <div class="d-flex align-items-center">
                 <div id="social"><strong>FACEBOOK - INSTAGRAM - YOUTUBE - TWITTER</strong></div>
@@ -32,7 +41,7 @@ export default{
             
         </div>
     </div>
-    
+
 </template>
 
 <style lang="scss" scoped>
@@ -47,7 +56,7 @@ export default{
     padding: 10rem 7.5rem;
 
 
-    span{
+    #experience{
         color: $text-waterGreen;
         font-family: 'Roboto Mono', monospace;
         letter-spacing: 5px;

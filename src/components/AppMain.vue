@@ -33,9 +33,12 @@ export default{
     <MainStartProject id="MainStartProject"></MainStartProject>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+
+@use '../assets/colors/AppColors.scss' as *;
+
 #MainPresentation{
-    background-color: #f5f5f5;
+    background-color: $bg-white;
 }
 
 #MainServices{
@@ -44,7 +47,7 @@ export default{
 
 #MainLearnMore{
     padding: 10rem 0;
-    background-color: #f5f5f5;
+    background-color: $bg-white;
 }
 
 #MainExample{
@@ -61,12 +64,12 @@ export default{
 
 #MainNews{
     padding: 10rem 5px;
-    background-color: #f5f5f5;
+    background-color: $bg-white;
 }
 
 #MainStartProject{
     padding: 0 2rem;
     padding-bottom: 7rem;
-    background-color: #f5f5f5;
+    background-color: $bg-white;
 }
 </style>

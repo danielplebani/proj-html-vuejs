@@ -5,7 +5,8 @@ export default{
 </script>
 
 <template>
-    <div class="d-flex align-items-center">
+    <div>
+      <div class="d-flex align-items-center">
       <div class="col-5">
         <h2>
             We Are Here To <br>
@@ -46,6 +47,7 @@ export default{
             <h4>Online Marketing</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
         </div>
+      </div>
       </div>
     </div>
 </template>
