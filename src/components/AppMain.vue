@@ -3,6 +3,9 @@
 import MainPresentation from './MainPresentation.vue';
 import MainServices from './MainServices.vue';
 import MainLearnMore from './MainLearnMore.vue';
+import MainExample from './MainExample.vue';
+import MainCitation from './MainCitation.vue';
+import MainNews from './MainNews.vue';
 
 export default{
     name: 'AppMain',
@@ -11,6 +14,9 @@ export default{
         MainPresentation,
         MainServices,
         MainLearnMore,
+        MainExample,
+        MainCitation,
+        MainNews,
     }
 }
 </script>
@@ -19,6 +25,9 @@ export default{
     <MainPresentation id="MainPresentation"></MainPresentation>
     <MainServices id="MainServices"></MainServices>
     <MainLearnMore id="MainLearnMore"></MainLearnMore>
+    <MainExample id="MainExample"></MainExample>
+    <MainCitation id="MainCitation"></MainCitation>
+    <MainNews id="MainNews"></MainNews>
 </template>
 
 <style scoped>
@@ -33,5 +42,21 @@ export default{
 #MainLearnMore{
     padding: 10rem 0;
     background-color: #f5f5f5;
+}
+
+#MainExample{
+    padding: 10rem 10px;
+}
+
+#MainCitation{
+    height: 100vh;
+    background: url(../assets/img/four-businesspeople-in-a-boardroom-with-paperwork-PC4V8H4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top -120px right 0;
+}
+
+#MainNews{
+    padding: 10rem 5px;
 }
 </style>
