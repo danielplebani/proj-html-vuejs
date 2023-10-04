@@ -44,7 +44,8 @@ export default{
 <style lang="scss" scoped>
 
 #HeaderLine{
-    background-color: #000000B3;
+    background: rgb(65,65,65);
+    background: linear-gradient(56deg, rgba(65,65,65,1) 0%, rgba(55,55,55,1) 25%, rgba(41,41,41,1) 50%, rgba(30,30,30,1) 75%, rgba(13,13,13,1) 100%);
     height: 25%;
     padding: 0 80px;
     font-size: small;

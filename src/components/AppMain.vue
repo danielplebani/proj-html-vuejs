@@ -65,7 +65,8 @@ export default{
 }
 
 #MainStartProject{
-    padding: 0 5px;
+    padding: 0 2rem;
+    padding-bottom: 7rem;
     background-color: #f5f5f5;
 }
 </style>

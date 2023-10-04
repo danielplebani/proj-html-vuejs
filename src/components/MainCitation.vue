@@ -9,7 +9,7 @@ export default{
         <div id="blackScreen" class="d-flex flex-column justify-content-center align-items-center">
             <i class="fa-solid fa-quote-left mb-5"></i>
 
-            <p class="mb-5"><em>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, modi? Quas, pariatur autem molestiae illum ipsa corrupti, magni inventore in, commodi veniam perspiciatis nam sequi! Asperiores quasi recusandae magnam sit?</em></p>
+            <p class="mb-5"><em>When it dolor sit amet consectetur, adipisicing elit. Molestias, modi? Quas, pariatur autem molestiae illum ipsa corrupti, magni inventore in, commodi veniam perspiciatis nam sequi! Lorem ipsum dolor sit.</em></p>
 
             <img class="mb-4" src="../assets/img/immagine-mancante1.avif">
 
@@ -39,6 +39,7 @@ export default{
         margin: 0 auto;
         line-height: 35px;
         font-family: 'AR One Sans', sans-serif;
+        letter-spacing: 1px;
     }
 
     img{
@@ -56,8 +57,8 @@ export default{
     }
 
     span{
-        color: white;
-        font-family: 'AR One Sans', sans-serif;
+        color: rgba(255, 255, 255, 0.7);
+        font-family: 'Rubik', sans-serif;
     }
 }
 </style>

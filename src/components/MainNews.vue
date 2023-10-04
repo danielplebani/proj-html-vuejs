@@ -30,7 +30,7 @@ export default{
             </div>
 
             <div class="col-4 p-2 position-relative">
-                <img src="../assets/img/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg">
+                <img src="../assets/img/asas.jpg">
 
                 <div class="newsTitle">
                     <span>May 24, 2018 •by Alex</span>
@@ -43,7 +43,7 @@ export default{
             </div>
 
             <div class="col-4 p-2 position-relative">
-                <img src="../assets/img/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg">
+                <img src="../assets/img/simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg">
 
                 <div class="newsTitle">
                     <span>May 24, 2018 •by Alex</span>
@@ -56,7 +56,7 @@ export default{
             </div>
         </div>
 
-        <button class="blackButton text-white">VIEW ALL POST</button>
+        <button class="blackButton">VIEW ALL POST</button>
     </div>
 </template>
 
@@ -100,6 +100,7 @@ img{
     font-size: small;
     margin-top: 8rem;
     border-radius: 50px;
+    color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     background: rgb(65,65,65);
     background: linear-gradient(56deg, rgba(65,65,65,1) 0%, rgba(55,55,55,1) 25%, rgba(41,41,41,1) 50%, rgba(30,30,30,1) 75%, rgba(13,13,13,1) 100%);
@@ -116,6 +117,7 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
 
     span{
         color: gray;

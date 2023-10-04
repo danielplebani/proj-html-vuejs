@@ -149,6 +149,7 @@ export default{
     p{
         color: #535252;
         font-size: small;
+        font-family: 'Rubik', sans-serif;
     } 
 }
 </style>

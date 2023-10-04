@@ -93,6 +93,7 @@ p{
     color: #535252;
     padding-top: 10rem;
     font-size: small;
+    font-family: 'Rubik', sans-serif;
 }
 
 img{
@@ -114,6 +115,7 @@ img{
         display: flex;
         justify-content: start;
         align-items: center;
+        font-family: 'Rubik', sans-serif;
 
         img{
             width: 10%;

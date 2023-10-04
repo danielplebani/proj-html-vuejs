@@ -112,6 +112,7 @@ button{
     p{
         font-size: small;
         color: gray;
+        font-family: 'Rubik', sans-serif;
     }
 }
 </style>

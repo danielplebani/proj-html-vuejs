@@ -16,9 +16,9 @@ export default{
                 <div id="separator2"></div>
             </div>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ducimus eligendi? Eligendi distinctio adipisci, provident fugiat temporibus, impedit quasi labore soluta consequuntur sed reiciendis qui, nisi exercitationem consectetur. Officia, dolores.</p>
+            <p>Far far dolor sit amet consectetur adipisicing elit. Nobis, ducimus eligendi? Eligendi distinctio adipisci, provident fugiat temporibus, impedit quasi labore soluta consequuntur sed reiciendis qui, nisi exercitationem consectetur.</p>
 
-            <button class="blackButton my-5 text-white">READ MORE</button>
+            <button class="blackButton my-5">READ MORE</button>
 
             <div class="d-flex align-items-center">
                 <div id="social"><strong>FACEBOOK - INSTAGRAM - YOUTUBE - TWITTER</strong></div>
@@ -79,7 +79,8 @@ export default{
 
     p{
         width: 50%;
-        color: #535252;
+        color: #535252dc;
+        font-family: 'Rubik', sans-serif;
     }
 
     .blackButton{
@@ -90,6 +91,7 @@ export default{
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         background: rgb(65,65,65);
         background: linear-gradient(56deg, rgba(65,65,65,1) 0%, rgba(55,55,55,1) 25%, rgba(41,41,41,1) 50%, rgba(30,30,30,1) 75%, rgba(13,13,13,1) 100%);
+        color: rgba(255, 255, 255, 0.7);
     }
     .blackButtonBg{
         border: none;
