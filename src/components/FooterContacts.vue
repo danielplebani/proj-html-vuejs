@@ -58,8 +58,11 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/colors/AppColors.scss' as *;
+
 p{
-    color: #767474;
+    color: $text-gray_80;
     font-family: 'Ar one sans', monospace;
     font-size: small;
 }
@@ -67,8 +70,7 @@ p{
 #separator1, #separator2{
     height: 4px;
     border-radius: 10px;
-    background: rgb(152,225,94);
-    background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1) 57%, rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
+    background: $bg-gradient-yellow-green;  
 }
 
 #separator1{
@@ -88,7 +90,7 @@ ul{
     padding: 0;
 
     li{
-        color: #767474;
+        color: $text-gray_80;
         font-family: 'Ar one sans', monospace;
         font-size: small;
     }

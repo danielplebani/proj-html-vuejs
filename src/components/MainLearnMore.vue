@@ -38,6 +38,7 @@ export default{
 
 <style lang="scss" scoped>
 
+@use '../assets/colors/AppColors.scss' as *;
 .col-7{
     position: relative;
     align-self: self-start;
@@ -63,8 +64,7 @@ export default{
         position: absolute;
         left: -100px;
         border-radius: 35px;
-        background: rgba(153, 225, 94, 0.75);
-        background: linear-gradient(106deg, rgba(152,225,94,0.75) 2%, rgba(142,225,99,0.75) 18%, rgba(96,222,121,0.75) 41%, rgba(64,220,135,0.75) 57%, rgba(29,219,153,0.75) 85%, rgba(0,217,166,0.75)); 
+        background: $bg-gradient-yellow-green; 
     }
 
     #cut-greenScreen{
@@ -74,8 +74,7 @@ export default{
         position: absolute;
         left: -130px;
         border-radius: 35px;
-        background: rgba(153, 225, 94, 0.75);
-        background: linear-gradient(106deg, rgba(152,225,94,0.75) 2%, rgba(142,225,99,0.75) 18%, rgba(96,222,121,0.75) 41%, rgba(64,220,135,0.75) 57%, rgba(29,219,153,0.75) 85%, rgba(0,217,166,0.75)); 
+        background: $bg-gradient-yellow-green; 
     }
 
     #original-img{
@@ -87,7 +86,7 @@ export default{
 
         img{
             border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 20px $shadow-black;
         }
         
     }
@@ -101,7 +100,7 @@ export default{
 
         img{
             border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 20px $shadow-black;
         }
     }
 
@@ -117,15 +116,14 @@ export default{
         span{
             font-family: 'Rubik', sans-serif;
             font-size: 50px;
-            color: #00d9a6;
+            color: $text-waterGreen;
         }
     }
     
     #separator1, #separator2{
         height: 4px;
         border-radius: 10px;
-        background: rgb(152,225,94);
-        background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1)     57%, rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
+        background: $bg-gradient-yellow-green;  
     }
 
     #separator1{
@@ -141,9 +139,8 @@ export default{
         border: none;
         border-radius: 50px;
         font-size: small;
-        background: rgb(152,225,94);
-        background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1)     57%, rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
-        box-shadow: 2px 2px 15px #00d9a68a;
+        background: $bg-gradient-yellow-green;  
+        box-shadow: 2px 2px 15px $text-waterGreen;
     }
     
     p{

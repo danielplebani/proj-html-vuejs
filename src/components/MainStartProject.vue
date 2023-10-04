@@ -41,16 +41,17 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/colors/AppColors.scss' as *;
+
 #blackCard{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    background: rgb(65,65,65);
-    background: linear-gradient(56deg, rgba(65,65,65,1) 0%, rgba(55,55,55,1) 25%, rgba(41,41,41,1) 50%, rgba(30,30,30,1) 75%, rgba(13,13,13,1) 100%);
+    box-shadow: 0 0 20px $shadow-black;
+    background: $bg-gradient-white_black;
 }
 
 #greenCard{
-    box-shadow: 0 0 20px #00d9a6ac;
-    background: rgb(8,217,162);
-    background: linear-gradient(90deg, rgba(8,217,162,1) 0%, rgba(34,218,149,1) 25%, rgba(66,219,135,1) 50%, rgba(94,222,123,1) 75%, rgba(120,223,110,1) 100%);
+    box-shadow: 0 0 20px $text-waterGreen;
+    background: $bg-gradient-yellow-green;
 }
 
 #blackCard, #greenCard{
@@ -58,7 +59,7 @@ export default{
     font-family: 'Rubik', sans-serif;
 
     span{
-        color: rgba(255, 255, 255, 0.486);
+        color: $text-gray_80;
         font-size: small;
         margin-bottom: 1rem;
     }
@@ -69,7 +70,7 @@ export default{
     }
 
     form{
-        background-color: rgba(128, 128, 128, 0.367);
+        background-color: $text-gray_80;
         border: none;
         width: 60%;
         border-radius: 40px;
@@ -86,6 +87,7 @@ export default{
             margin: 0;
             font-family: 'Rubik', sans-serif;
             font-size: small;
+            color: gray;
         }
     }
 
@@ -100,11 +102,10 @@ export default{
     border: none;
     padding: 13px 40px;
     font-size: small;
-    color: rgba(255, 255, 255, 0.7);
+    color: $text-white_70;
     border-radius: 50px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    background: rgb(65,65,65);
-    background: linear-gradient(56deg, rgba(65,65,65,1) 0%, rgba(55,55,55,1) 25%, rgba(41,41,41,1) 50%, rgba(30,30,30,1) 75%, rgba(13,13,13,1) 100%);
+    box-shadow: 0 0 20px $shadow-black;
+    background: $bg-gradient-white_black;
 }
 
 img{

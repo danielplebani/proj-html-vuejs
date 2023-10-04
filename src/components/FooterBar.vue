@@ -27,8 +27,11 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/colors/AppColors.scss' as *;
+
 span, i{
-    color: rgba(255, 255, 255, 0.477);
+    color: $text-white_70;
     font-size: small;
 }
 
@@ -38,10 +41,10 @@ span{
 
 .arrow{
     background-color: white;
-    color: rgba(0, 0, 0, 0.51);
+    color: black;
     padding: 9px 10px;
     border-radius: 50%;
-    border: 0.5px solid gray;
+    border: 0.5px solid $text-white_70;
     cursor: pointer;
 }
 

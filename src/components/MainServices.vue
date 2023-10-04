@@ -51,6 +51,9 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/colors/AppColors.scss' as *;
+
 .col-5{
     padding: 3rem 0;
 }
@@ -62,15 +65,14 @@ h2{
     span{
         font-family: 'Rubik', sans-serif;
         font-size: 50px;
-        color: #00d9a6;
+        color: $text-waterGreen;
     }
 }
 
 #separator1, #separator2{
     height: 4px;
     border-radius: 10px;
-    background: rgb(152,225,94);
-    background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1) 57%, rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
+    background: $bg-gradient-yellow-green;  
 }
 
 #separator1{
@@ -86,16 +88,15 @@ button{
     border: none;
     border-radius: 50px;
     font-size: small;
-    background: rgb(152,225,94);
-    background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1) 57%, rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
-    box-shadow: 2px 2px 15px #00d9a68a;
+    background: $bg-gradient-yellow-green;  
+    box-shadow: 2px 2px 15px $text-waterGreen;
 }
 
 .card{
     width: 49%;
     height: 15rem;
     border: none;
-    box-shadow: 0 0 30px rgba(128, 128, 128, 0.241);
+    box-shadow: 0 0 30px $shadow-gray;
     padding: 2rem;
     display: flex;
     flex-direction: column;

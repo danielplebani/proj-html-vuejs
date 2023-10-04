@@ -61,6 +61,9 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/colors/AppColors.scss' as *;
+
 h2{
     font-family: 'Rubik', sans-serif;
     font-size: 50px;
@@ -68,15 +71,14 @@ h2{
     span{
         font-family: 'Rubik', sans-serif;
         font-size: 50px;
-        color: #00d9a6;
+        color: $text-waterGreen;
     }
 }
 
 #separator1, #separator2{
     height: 4px;
     border-radius: 10px;
-    background: rgb(152,225,94);
-    background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1) 57%, rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
+    background: $bg-gradient-yellow-green;  
 }
 
 #separator1{
@@ -91,7 +93,7 @@ img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px $shadow-black;
 }
 
 .blackButton{
@@ -101,9 +103,8 @@ img{
     margin-top: 8rem;
     border-radius: 50px;
     color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    background: rgb(65,65,65);
-    background: linear-gradient(56deg, rgba(65,65,65,1) 0%, rgba(55,55,55,1) 25%, rgba(41,41,41,1) 50%, rgba(30,30,30,1) 75%, rgba(13,13,13,1) 100%);
+    box-shadow: 0 0 20px $shadow-black;
+    background: $bg-gradient-white_black;
 }
 
 .newsTitle{
@@ -130,7 +131,7 @@ img{
         font-family: 'Rubik', sans-serif;
 
         i{
-            color: #00d9a6;
+            color: $text-waterGreen;
             font-size: x-small;
         }
     }

@@ -36,6 +36,9 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/colors/AppColors.scss' as *;
+
 #container{
     background-image: url(../assets/img/Group-36-2x.png);
     background-size: 165vh;
@@ -45,7 +48,7 @@ export default{
 
 
     span{
-        color: #00d9a6;
+        color: $text-waterGreen;
         font-family: 'Roboto Mono', monospace;
         letter-spacing: 5px;
         font-size: small;
@@ -58,7 +61,7 @@ export default{
         span{
             font-family: 'Rubik', sans-serif;
             font-size: 60px;
-            color: #00d9a6;
+            color: $text-waterGreen;
         }
     }
 
@@ -66,7 +69,7 @@ export default{
         height: 4px;
         border-radius: 10px;
         background: rgb(152,225,94);
-        background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1) 57%, rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
+        background: $bg-gradient-yellow-green;  
     }
 
     #separator1{
@@ -79,7 +82,7 @@ export default{
 
     p{
         width: 50%;
-        color: #535252dc;
+        color: $text-gray_80;
         font-family: 'Rubik', sans-serif;
     }
 
@@ -89,17 +92,14 @@ export default{
         font-size: small;
         border-radius: 50px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-        background: rgb(65,65,65);
-        background: linear-gradient(56deg, rgba(65,65,65,1) 0%, rgba(55,55,55,1) 25%, rgba(41,41,41,1) 50%, rgba(30,30,30,1) 75%, rgba(13,13,13,1) 100%);
-        color: rgba(255, 255, 255, 0.7);
+        background: $bg-gradient-white_black;
+        color: $text-white_70;
     }
     .blackButtonBg{
         border: none;
         padding: 3px;
         border-radius: 50px;
-        background: rgb(65,65,65);
-        background: linear-gradient(56deg, rgba(65,65,65,1) 0%, rgba(55,55,55,1) 25%, rgba(41,41,41,1) 50%, rgba(30,30,30,1) 75%, rgba(13,13,13,1) 100%);
-        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.551);
+        background: $bg-gradient-white_black;
 
         button{
             padding: 10px 20px;
@@ -107,19 +107,18 @@ export default{
             border-radius: 50px;
             font-size: large;
             background-color: transparent;
-            color: rgba(255, 255, 255, 0.436);
+            color: $text-white_70;
         }
 
         .greenButton{
-            background: rgb(152,225,94);
-            background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1) 57%,     rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
+            background: $bg-gradient-yellow-green; 
         }
     }
 
     #social{
         font-size: 13px;
         letter-spacing: 1px;
-        color: #3d3d3d;
+        color: $text-darkGray;
         margin-right: 170px;
     }
 }

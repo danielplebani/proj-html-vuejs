@@ -63,6 +63,9 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/colors/AppColors.scss' as *;
+
 h2{
     font-family: 'Rubik', sans-serif;
     font-size: 50px;
@@ -70,15 +73,14 @@ h2{
     span{
         font-family: 'Rubik', sans-serif;
         font-size: 50px;
-        color: #00d9a6;
+        color: $text-waterGreen;
     }
 }
 
 #separator1, #separator2{
     height: 4px;
     border-radius: 10px;
-    background: rgb(152,225,94);
-    background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1) 57%, rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
+    background: $bg-gradient-yellow-green;  
 }
 
 #separator1{
@@ -90,7 +92,7 @@ h2{
 }
 
 p{
-    color: #535252;
+    color: $text-gray_80;
     padding-top: 10rem;
     font-size: small;
     font-family: 'Rubik', sans-serif;
@@ -131,8 +133,7 @@ img{
     border: none;
     border-radius: 50px;
     font-size: small;
-    background: rgb(152,225,94);
-    background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1)57%, rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
-    box-shadow: 2px 2px 15px #00d9a68a;
+    background: $bg-gradient-yellow-green;  
+    box-shadow: 2px 2px 15px $text-waterGreen;
 }
 </style>

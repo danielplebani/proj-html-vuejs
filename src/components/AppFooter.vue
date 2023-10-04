@@ -19,6 +19,9 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/colors/AppColors.scss' as *;
+
 #FooterContacts{
     padding: 10rem 2rem;
 }

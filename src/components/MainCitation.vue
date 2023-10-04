@@ -22,14 +22,16 @@ export default{
 </template>
 
 <style lang="scss" scoped>
+
+@use '../assets/colors/AppColors.scss' as *;
+
 #blackScreen{
     width: 100%;
     height: 100%;
-    background: rgb(13,13,13,0.6);
-    background: linear-gradient(56deg, rgba(13,13,13,0.9) 0%, rgba(30,30,30,0.9) 40%, rgba(41,41,41,0.9) 60%, rgba(55,55,55,0.9) 72%, rgba(111,110,110,0.9) 100%);
+    background: $bg-gradient-black_white;
 
     i{
-        color: #00d9a6;
+        color: $text-waterGreen;
         font-size: 50px;
     }
 
@@ -48,16 +50,16 @@ export default{
         border-radius: 50%;
         border: 3px solid white;
         object-fit: cover;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.371);
+        box-shadow: 0 0 20px $shadow-gray;
     }
 
     h5{
-        color: #00d9a6;
+        color: $text-waterGreen;
         font-family: 'AR One Sans', sans-serif;
     }
 
     span{
-        color: rgba(255, 255, 255, 0.7);
+        color: $text-white_70;
         font-family: 'Rubik', sans-serif;
     }
 }

@@ -43,9 +43,10 @@ export default{
 
 <style lang="scss" scoped>
 
+@use '../assets/colors/AppColors.scss' as *;
+
 #HeaderLine{
-    background: rgb(65,65,65);
-    background: linear-gradient(56deg, rgba(65,65,65,1) 0%, rgba(55,55,55,1) 25%, rgba(41,41,41,1) 50%, rgba(30,30,30,1) 75%, rgba(13,13,13,1) 100%);
+    background: $bg-gradient-white_black;
     height: 25%;
     padding: 0 80px;
     font-size: small;
@@ -65,7 +66,7 @@ export default{
 
     span{
         font-size: small;
-        color: rgb(53, 51, 51);
+        color: $text-white_70;
         font-family: 'AR One Sans', sans-serif;
         cursor: pointer;
     }
@@ -76,12 +77,12 @@ export default{
         border-radius: 50px;
         font-size: small;
         background: rgb(152,225,94);
-        background: linear-gradient(106deg, rgba(152,225,94,1) 2%, rgba(142,225,99,1) 18%, rgba(96,222,121,1) 41%, rgba(64,220,135,1) 57%, rgba(29,219,153,1) 85%, rgba(0,217,166,1));  
-        box-shadow: 2px 2px 15px #00d9a68a;
+        background: $bg-gradient-yellow-green;  
+        box-shadow: 2px 2px 15px $text-waterGreen;
     }
 
     i{
-        color: #00d9a6;
+        color: $text-waterGreen;
         cursor: pointer;
     }
 }
