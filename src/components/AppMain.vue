@@ -6,6 +6,7 @@ import MainLearnMore from './MainLearnMore.vue';
 import MainExample from './MainExample.vue';
 import MainCitation from './MainCitation.vue';
 import MainNews from './MainNews.vue';
+import MainStartProject from './MainStartProject.vue';
 
 export default{
     name: 'AppMain',
@@ -17,6 +18,7 @@ export default{
         MainExample,
         MainCitation,
         MainNews,
+        MainStartProject
     }
 }
 </script>
@@ -28,6 +30,7 @@ export default{
     <MainExample id="MainExample"></MainExample>
     <MainCitation id="MainCitation"></MainCitation>
     <MainNews id="MainNews"></MainNews>
+    <MainStartProject id="MainStartProject"></MainStartProject>
 </template>
 
 <style scoped>
@@ -58,5 +61,11 @@ export default{
 
 #MainNews{
     padding: 10rem 5px;
+    background-color: #f5f5f5;
+}
+
+#MainStartProject{
+    padding: 0 5px;
+    background-color: #f5f5f5;
 }
 </style>

@@ -87,6 +87,7 @@ export default{
         padding: 13px 40px;
         font-size: small;
         border-radius: 50px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         background: rgb(65,65,65);
         background: linear-gradient(56deg, rgba(65,65,65,1) 0%, rgba(55,55,55,1) 25%, rgba(41,41,41,1) 50%, rgba(30,30,30,1) 75%, rgba(13,13,13,1) 100%);
     }
