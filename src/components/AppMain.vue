@@ -25,7 +25,7 @@ export default{
 
 <template>
     <MainPresentation id="MainPresentation"></MainPresentation>
-    <MainServices id="MainServices"></MainServices>
+    <MainServices inServices id="MainServices"></MainServices>
     <MainLearnMore id="MainLearnMore"></MainLearnMore>
     <MainExample id="MainExample"></MainExample>
     <MainCitation id="MainCitation"></MainCitation>

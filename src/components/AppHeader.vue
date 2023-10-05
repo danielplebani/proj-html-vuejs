@@ -1,5 +1,6 @@
 <script>
 import HeaderNav from '../componentsFather/HeaderNav.vue';
+import AppSocialIcon from '../components/utility/AppSocialIcon.vue'
 
 export default{
     name: 'AppHeader',
@@ -36,7 +37,8 @@ export default{
     },
 
     components:{
-        HeaderNav
+        HeaderNav,
+        AppSocialIcon
     },
 
     methods:{
@@ -56,11 +58,7 @@ export default{
         <!--top of the header-->
         <div id="HeaderLine" class="d-flex justify-content-between align-items-center text-white">
             <span>(001) 88451234 88455438</span>
-            <div>
-                <i class="fa-brands fa-facebook-f me-4"></i>
-                <i class="fa-brands fa-twitter me-4"></i>
-                <i class="fa-brands fa-pinterest-p"></i>
-            </div>
+            <AppSocialIcon></AppSocialIcon>
         </div>
 
         <!--header body-->
@@ -82,8 +80,8 @@ export default{
     
 </template>
 
-<style lang="scss" scoped>
 
+<style lang="scss" scoped>
 @use '../assets/colors/AppColors.scss' as *;
 
 #HeaderLine{
@@ -94,6 +92,10 @@ export default{
 
     i{
         cursor: pointer;
+    }
+
+    span{
+        color: $text-white_70;
     }
 }
 
