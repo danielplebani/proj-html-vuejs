@@ -1,5 +1,4 @@
 <script>
-
 import MainPresentation from './MainPresentation.vue';
 import MainServices from './MainServices.vue';
 import MainLearnMore from './MainLearnMore.vue';
@@ -44,7 +43,7 @@ export default{
 }
 
 #MainServices{
-    padding: 10rem 10px;
+    padding: 10rem 2rem;
     background-color: white;
     position: absolute; 
     z-index: 1;
@@ -56,7 +55,7 @@ export default{
 }
 
 #MainExample{
-    padding: 10rem 10px;
+    padding: 10rem 2rem;
 }
 
 #MainCitation{
@@ -68,7 +67,7 @@ export default{
 }
 
 #MainNews{
-    padding: 10rem 5px;
+    padding: 10rem 2rem;
     background-color: $bg-white;
 }
 

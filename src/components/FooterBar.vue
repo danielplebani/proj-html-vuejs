@@ -27,6 +27,7 @@ export default{
             <AppSocialIcon></AppSocialIcon>
         </div>
 
+        <!--live assistance buttons-->
         <div class="assistance d-flex align-items-center" v-if="assistancePresent">
             <i class="fa-solid fa-arrow-up arrow me-3"></i>
             <i class="fa-regular fa-comment liveChat"></i>
@@ -51,7 +52,7 @@ span{
 .assistance{
     position: absolute;
     top: 10px;
-    right: 2rem;
+    right: 1rem;
 
     .arrow{
         background-color: white;
@@ -80,7 +81,7 @@ span{
         padding: 4px 5px;
         border-radius: 50%;
         border: none;
-        font-size: xx-small;
+        font-size: 7px;
         align-self: self-start;
     }
 }

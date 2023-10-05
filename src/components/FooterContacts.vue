@@ -28,11 +28,13 @@ export default{
 
 <template>
     <div class="d-flex">
+        <!--company-->
         <div class="col-3 d-flex flex-column px-3">
             <img style="width: 60%;" class="mb-3" src="../assets/img/cropped-Group-39-2x.png">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, nobis. Delectus sunt quo perferendis provident vitae blanditiis, sit deleniti saepe odio laboriosam laborum earum repudiandae.</p>
         </div>
 
+        <!--quick links-->
         <div class="col-3 d-flex flex-column px-3">
             <h5 class="mb-4"><strong>QUICK LINKS</strong></h5>
 
@@ -43,8 +45,10 @@ export default{
             </ul>
         </div>
  
+        <!--contacts-->
         <ContactsContact :street="address.street" :mail="address.mail" :number="address.number"></ContactsContact>
 
+        <!--location-->
         <div class="col-3 d-flex flex-column px-3">
             <h5 class="mb-4"><strong>LOCATION ON MAP</strong></h5>
 

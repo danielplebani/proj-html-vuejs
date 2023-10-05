@@ -84,31 +84,6 @@ export default{
 
 @use '../assets/colors/AppColors.scss' as *;
 
-h2{
-    font-family: 'Rubik', sans-serif;
-    font-size: 50px;
-
-    span{
-        font-family: 'Rubik', sans-serif;
-        font-size: 50px;
-        color: $text-waterGreen;
-    }
-}
-
-#separator1, #separator2{
-    height: 4px;
-    border-radius: 10px;
-    background: $bg-gradient-yellow-green;  
-}
-
-#separator1{
-    width: 15px;
-}
-
-#separator2{
-    width: 35px;
-}
-
 p{
     color: $text-gray_80;
     padding-top: 10rem;
@@ -173,7 +148,7 @@ p{
     }
 
     button:hover {
-    transform: translateX(-50px);
+    transform: translateX(-40px);
     }
 }
 </style>

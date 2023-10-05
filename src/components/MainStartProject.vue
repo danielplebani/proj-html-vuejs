@@ -12,12 +12,13 @@ export default{
 
                 <h3>Start a New Project</h3>
 
-                <form class="container-fluid py-1">
+                <form class="container-fluid py-1 mb-3">
                   <div class="input-group">
                     <input type="text" class="form-control text-white" placeholder="Enter yor email address">
                     <span class="input-group-text">SUBMIT</span>
                   </div>
                 </form>
+
             </div>
 
             <div id="greenCard" class="col-6 d-flex flex-column justify-content-center align-items-center py-5">

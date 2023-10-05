@@ -1,5 +1,4 @@
 <script>
-
 import AppSeparator from '../components/utility/AppSeparator.vue'
 
 export default{
@@ -32,7 +31,6 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-
 @use '../assets/colors/AppColors.scss' as *;
 
 p{
