@@ -1,6 +1,12 @@
 <script>
 export default{
     name: 'MainExample',
+
+    data(){
+        return{
+            mouseOver: true,
+        }
+    }
 }
 </script>
 
@@ -31,14 +37,63 @@ export default{
       </div>
 
       <div class="d-flex justify-content-center flex-wrap gap-1 my-5 position-relative">
-        <img src="../assets/img/ina-soulis-227104-unsplash-1024x1024.jpg">
-        <img src="../assets/img/sunisa-misa-531163-unsplash-1024x1024.jpg">
-        <img src="../assets/img/scarpegialle.jpeg">
-        <img src="../assets/img/photo-1448932252197-d19750584e56-1024x1024.jpg">
-        <img src="../assets/img/origami.avif">
-        <img src="../assets/img/cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg">
-        <img src="../assets/img/mongolfiera.jpg">
-        <img src="../assets/img/cody-davis-253928-unsplash-1024x1024.jpg">
+        <div class="projects">
+            <img src="../assets/img/ina-soulis-227104-unsplash-1024x1024.jpg">
+            <div class="infoImg">
+                <h5>A simple bouquet of red flowers</h5>
+                <span>BOUQUET</span>
+            </div>
+        </div>
+        <div class="projects">
+            <img src="../assets/img/sunisa-misa-531163-unsplash-1024x1024.jpg">
+            <div class="infoImg">
+                <h5>A famous Ferris Whell</h5>
+                <span>MARKETING</span>
+            </div>
+        </div>
+        <div class="projects">
+            <img src="../assets/img/scarpegialle.jpeg">
+            <div class="infoImg">
+                <h5>A high yellow shoes</h5>
+                <span>YELLOW SHOES</span>
+            </div>
+        </div>
+        <div class="projects">
+            <img src="../assets/img/photo-1448932252197-d19750584e56-1024x1024.jpg">
+            <div class="infoImg">
+                <h5>A simple office work</h5>
+                <span>OFFICE</span>
+            </div>
+        </div>
+        <div class="projects">
+            <img src="../assets/img/origami.avif">
+            <div class="infoImg">
+                <h5>A lot of origami boat shape</h5>
+                <span>ORIGAMI</span>
+            </div>
+        </div>
+        <div class="projects">
+            <img src="../assets/img/mongolfiera.jpg">
+            <div class="infoImg">
+                <h5>A fantastic hot air balloon</h5>
+                <span>HOT AIR BALLOON</span>
+            </div>
+        </div>
+        <div class="projects">
+            <img src="../assets/img/cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg">
+            <div class="infoImg">
+                <h5>A white officee in living room</h5>
+                <span>SOFA</span>
+            </div>
+        </div>
+        <div class="projects">
+            <img src="../assets/img/cody-davis-253928-unsplash-1024x1024.jpg">
+            <div class="infoImg">
+                <h5>A particular orange blue</h5>
+                <span>BLUE ORANGE</span>
+            </div>
+        </div>
+        
 
         <div id="quickCommands" class="d-flex flex-column">
             <button class="mb-2">
@@ -56,9 +111,14 @@ export default{
                 Export Section
             </button>
         </div>
+
       </div>
 
-      <button class="text-white greenButton">READ MORE</button>
+        <button class="greenButton text-white me-5" @mouseenter="mouseOver = false"  @mouseleave="mouseOver = true">
+            <span v-if="mouseOver">READ MORE</span>
+            <span v-if="mouseOver == false">VIEW ALL</span>
+        </button>
+
     </div>
 </template>
 
@@ -98,8 +158,36 @@ p{
     font-family: 'Rubik', sans-serif;
 }
 
-img{
+.projects{
     width: calc(99% / 4);
+    cursor: pointer;
+    position: relative;
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .infoImg{
+        display: none;
+        width: calc(100% - 2rem);
+        height: calc(100% - 2rem);
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: white;
+        padding-left: 2rem;
+        padding-top: 16rem;
+        font-family: 'Rubik', sans-serif;
+        background: linear-gradient(106deg, rgba(152,225,94,0.9) 2%, rgba(142,225,99,0.9) 18%, rgba(96,222,121,0.9) 41%, rgba(64,220,135,0.9) 57%, rgba(29,219,153,0.9) 85%, rgba(0,217,166,0.9));
+    }
+}
+
+.projects:hover{
+    .infoImg{
+        display: block;
+    }
 }
 
 #quickCommands{

@@ -1,6 +1,12 @@
 <script>
 export default{
     name: 'MainLearnMore',
+
+    data(){
+        return{
+            mouseOver: true,
+        }
+    }
 }
 </script>
 
@@ -20,7 +26,7 @@ export default{
         <div style="padding-right: 7rem;" class="col-5">
             <h2>
                learn more about <br>
-               our <span>missions</span> <br> 
+               our <span class="title">missions</span> <br> 
             </h2>
   
           <div class="d-flex mt-4">
@@ -31,7 +37,10 @@ export default{
           <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ducimus eligendi? Eligendi distinctio adipisci, provident fugiat temporibus, impedit quasi labore soluta consequuntur sed reiciendis qui, nisi exercitationem consectetur. Officia, dolores.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium hic sit reiciendis facere laudantium similique ipsa et officiis, consectetur quaerat reprehenderit minus id dolore, accusamus aut rerum ad soluta. Iste.</p>
 
   
-          <button class="text-white me-5">READ MORE</button>
+          <button class="text-white me-5" @mouseenter="mouseOver = false"  @mouseleave="mouseOver = true">
+            <span v-if="mouseOver">READ MORE</span>
+            <span v-if="mouseOver == false">VIEW ALL</span>
+          </button>
         </div>
     </div>
 </template>
@@ -113,7 +122,7 @@ export default{
         font-family: 'Rubik', sans-serif;
         font-size: 50px;
     
-        span{
+        .title{
             font-family: 'Rubik', sans-serif;
             font-size: 50px;
             color: $text-waterGreen;

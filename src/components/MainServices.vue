@@ -25,25 +25,25 @@ export default{
 
       <div class="col-7 d-flex justify-content-between flex-wrap gap-3">
         <div class="card">
-            <img src="../assets/img/23.png">
+            <i class="fa-solid fa-gauge"></i>
             <h4>Speed Optimizazion</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
         </div>
 
         <div class="card">
-            <img src="../assets/img/24.png">
+            <i class="fa-solid fa-cloud"></i>
             <h4>Cloud Solutions</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
         </div>
 
         <div class="card">
-            <img src="../assets/img/25.png">
+            <i class="fa-solid fa-mobile-screen"></i>
             <h4>Website Design</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
         </div>
 
         <div class="card">
-            <img src="../assets/img/26.png">
+            <i class="fa-regular fa-clock"></i>
             <h4>Online Marketing</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
         </div>
@@ -103,9 +103,10 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 
-    img{
-        width: 15%;
+    i{
+        font-size: 50px;
     }
 
     h4{
@@ -116,6 +117,20 @@ button{
         font-size: small;
         color: gray;
         font-family: 'Rubik', sans-serif;
+    }
+}
+
+.card:hover{
+    box-shadow: 0 0 30px $shadow-green;
+    background: $bg-gradient-yellow-green;
+    color: white;
+
+    p{
+        color: white;
+    }
+
+    i{
+        color: white;
     }
 }
 </style>
