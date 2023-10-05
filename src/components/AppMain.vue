@@ -45,8 +45,8 @@ export default{
 #MainServices{
     padding: 10rem 2rem;
     background-color: white;
-    
-    
+    z-index: 1;
+    position: relative;
 }
 
 #MainLearnMore{
