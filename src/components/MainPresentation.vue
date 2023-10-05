@@ -1,13 +1,70 @@
 <script>
+
+import AppSeparator from './utility/AppSeparator.vue';
+
 export default{
     name: 'MainPresentation',
+
+    components: {
+        AppSeparator
+    },
 
     data(){
         return{
             mouseOver: true,
+
+            slides: [
+                {
+                    number : '01',
+                    image: 'src/assets/img/1bg.png'
+                },
+                {
+                    number : '02',
+                    image: 'src/assets/img/2bg.png'
+                },
+                {
+                    number : '03',
+                    image: 'src/assets/img/3bg.png'
+                }
+            ],
+
+            activeSlide : 0,
+
+            autoplayInterval: null
         }
+    },
+
+    methods: {
+    prev() {
+        this.activeSlide--
+        if (this.activeSlide < 0) {
+            this.activeSlide =  this.slides.length - 1;
+        }
+    },
+
+    next() {
+        this.activeSlide++
+        if (this.activeSlide > this.slides.length - 1) {
+            this.activeSlide = 0
+        }
+    },
+
+    autoplay() {
+        this.autoplayInterval = setInterval(() => {
+        this.next();
+    }, 3000)
+    },
+
+    stopAutoplay() {
+        clearInterval(this.autoplayInterval);
     }
-}
+  },
+
+  mounted() {
+    this.autoplay()
+  }
+    }
+
 </script>
 
 <template>
@@ -17,10 +74,7 @@ export default{
 
             <h1 class="mt-1"><strong>We Are a <br> Web Design <span>Agency</span></strong></h1>
 
-            <div class="d-flex my-5">
-                <div id="separator1" class="me-2"></div>
-                <div id="separator2"></div>
-            </div>
+            <AppSeparator class="my-4"></AppSeparator>
 
             <p>Far far dolor sit amet consectetur adipisicing elit. Nobis, ducimus eligendi? Eligendi distinctio adipisci, provident fugiat temporibus, impedit quasi labore soluta consequuntur sed reiciendis qui, nisi exercitationem consectetur.</p>
 
@@ -31,30 +85,24 @@ export default{
 
             <div class="d-flex align-items-center">
                 <div id="social"><strong>FACEBOOK - INSTAGRAM - YOUTUBE - TWITTER</strong></div>
-                <div class="blackButtonBg">
-                    <button class="greenButton"><strong>01</strong></button>
-                    <button><strong>02</strong></button>
-                    <button><strong>03</strong></button>
+                <div class="blackButtonBg" @mouseenter="stopAutoplay()" @mouseleave="autoplay()">
+                    <button v-for="(slide, index) in slides" :class="activeSlide == index ? 'bg-gradient-yellow-green' : ''" @click="activeSlide = index;"><strong>{{slide.number}}</strong></button>
                 </div>
             </div>
-            
-            
         </div>
-    </div>
 
+        <img :src="slides[activeSlide].image">
+    </div>
 </template>
+
 
 <style lang="scss" scoped>
 
 @use '../assets/colors/AppColors.scss' as *;
 
 #container{
-    background-image: url(../assets/img/Group-36-2x.png);
-    background-size: 165vh;
-    background-repeat: no-repeat;
-    background-position: top -35px right -260px;
-    padding: 10rem 7.5rem;
-
+    padding: 8rem;
+    padding-bottom: 13.5rem;
 
     #experience{
         color: $text-waterGreen;
@@ -64,29 +112,13 @@ export default{
     }
 
     h1{
-        font-family: 'Rubik', sans-serif;
         font-size: 60px;
 
         span{
-            font-family: 'Rubik', sans-serif;
+            
             font-size: 60px;
-            color: $text-waterGreen;
+            
         }
-    }
-
-    #separator1, #separator2{
-        height: 4px;
-        border-radius: 10px;
-        background: rgb(152,225,94);
-        background: $bg-gradient-yellow-green;  
-    }
-
-    #separator1{
-        width: 15px;
-    }
-
-    #separator2{
-        width: 35px;
     }
 
     p{
@@ -95,20 +127,12 @@ export default{
         font-family: 'Rubik', sans-serif;
     }
 
-    .blackButton{
-        border: none;
-        padding: 13px 40px;
-        font-size: small;
-        border-radius: 50px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-        background: $bg-gradient-white_black;
-        color: $text-white_70;
-    }
     .blackButtonBg{
         border: none;
         padding: 3px;
         border-radius: 50px;
         background: $bg-gradient-white_black;
+        z-index: 1;
 
         button{
             padding: 10px 20px;
@@ -118,10 +142,6 @@ export default{
             background-color: transparent;
             color: $text-white_70;
         }
-
-        .greenButton{
-            background: $bg-gradient-yellow-green; 
-        }
     }
 
     #social{
@@ -130,5 +150,12 @@ export default{
         color: $text-darkGray;
         margin-right: 170px;
     }
+}
+
+img{
+    position: absolute;
+    width: 153vh;
+    top: 4rem;
+    right: -13rem;
 }
 </style>

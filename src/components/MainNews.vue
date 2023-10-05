@@ -1,64 +1,52 @@
 <script>
+
+import NewsCard from '../componentsChild/NewsCard.js'
+import AppSeparator from './utility/AppSeparator.vue';
+
 export default{
     name: 'MainNews',
+
+    components: {
+        AppSeparator
+    },
+
+    data(){
+        return{
+            NewsCard
+        }
+    }
 }
 </script>
 
 <template>
     <div class="d-flex flex-column align-items-center">
-        <h2 class="mb-5">
+        <h2 class="mb-3">
             Latest news & our <span>blog</span>
         </h2>
 
-        <div class="d-flex mb-4">
-            <div id="separator1" class="me-2"></div>
-            <div id="separator2"></div>
-        </div>
+        <AppSeparator class="mb-5"></AppSeparator>
+
 
         <div class="d-flex">
-            <div class="col-4 p-2 position-relative">
-                <img src="../assets/img/serious-businesswoman-with-documents-talking-on-P9Q6LX6-1024.jpg">
+            <div class="col-4 p-2 position-relative" v-for="news in NewsCard">
+                <img :src="news.img">
 
                 <div class="newsTitle">
-                    <span>May 24, 2018 •by Alex</span>
+                    <span>{{news.author}}</span>
 
                     <h5 class="mt-2 ps-5 d-flex align-items-center">
                         <i class="fa-solid fa-circle me-2"></i>
-                        <strong>Marketing Ideas</strong>
-                    </h5>
-                </div>
-            </div>
-
-            <div class="col-4 p-2 position-relative">
-                <img src="../assets/img/asas.jpg">
-
-                <div class="newsTitle">
-                    <span>May 24, 2018 •by Alex</span>
-
-                    <h5 class="mt-2 ps-5 d-flex align-items-center">
-                        <i class="fa-solid fa-circle me-2"></i>
-                        <strong>Rest During Working Hours</strong>
-                    </h5>
-                </div>
-            </div>
-
-            <div class="col-4 p-2 position-relative">
-                <img src="../assets/img/simple-home-office-with-tree-PBXRXYB-large-1024x768.jpg">
-
-                <div class="newsTitle">
-                    <span>May 24, 2018 •by Alex</span>
-
-                    <h5 class="mt-2 ps-5 d-flex align-items-center">
-                        <i class="fa-solid fa-circle me-2"></i>
-                        <strong>Develope Your Startup Idea</strong>
+                        <strong>{{news.title}}</strong>
                     </h5>
                 </div>
             </div>
         </div>
+
 
         <button class="blackButton">VIEW ALL POST</button>
     </div>
 </template>
+
 
 <style lang="scss" scoped>
 
@@ -75,36 +63,11 @@ h2{
     }
 }
 
-#separator1, #separator2{
-    height: 4px;
-    border-radius: 10px;
-    background: $bg-gradient-yellow-green;  
-}
-
-#separator1{
-    width: 15px;
-}
-
-#separator2{
-    width: 35px;
-}
-
 img{
     width: 100%;
     height: 100%;
     border-radius: 10px;
     box-shadow: 0 0 30px $shadow-black;
-}
-
-.blackButton{
-    border: none;
-    padding: 13px 40px;
-    font-size: small;
-    margin-top: 8rem;
-    border-radius: 50px;
-    color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 0 20px $shadow-black;
-    background: $bg-gradient-white_black;
 }
 
 .newsTitle{
@@ -135,5 +98,13 @@ img{
             font-size: x-small;
         }
     }
+}
+.newsTitle:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 30px black;
+}
+
+button{
+    margin-top: 6rem;
 }
 </style>

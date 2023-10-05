@@ -1,6 +1,12 @@
 <script>
+import AppSeparator from './utility/AppSeparator.vue';
+
 export default{
     name: 'MainLearnMore',
+
+    components: {
+        AppSeparator
+    },
 
     data(){
         return{
@@ -26,24 +32,22 @@ export default{
         <div style="padding-right: 7rem;" class="col-5">
             <h2>
                learn more about <br>
-               our <span class="title">missions</span> <br> 
+               our <span>missions</span> <br> 
             </h2>
   
-          <div class="d-flex mt-4">
-              <div id="separator1" class="me-2"></div>
-              <div id="separator2"></div>
-          </div>
+          <AppSeparator></AppSeparator>
 
           <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ducimus eligendi? Eligendi distinctio adipisci, provident fugiat temporibus, impedit quasi labore soluta consequuntur sed reiciendis qui, nisi exercitationem consectetur. Officia, dolores.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium hic sit reiciendis facere laudantium similique ipsa et officiis, consectetur quaerat reprehenderit minus id dolore, accusamus aut rerum ad soluta. Iste.</p>
 
   
-          <button class="text-white me-5" @mouseenter="mouseOver = false"  @mouseleave="mouseOver = true">
+          <button class="greenButton text-white me-5" @mouseenter="mouseOver = false"  @mouseleave="mouseOver = true">
             <span v-if="mouseOver">READ MORE</span>
             <span v-if="mouseOver == false">VIEW ALL</span>
           </button>
         </div>
     </div>
 </template>
+
 
 <style lang="scss" scoped>
 
@@ -118,39 +122,6 @@ export default{
 
 .col-5{
     padding: 4rem 0;
-    h2{
-        font-family: 'Rubik', sans-serif;
-        font-size: 50px;
-    
-        .title{
-            font-family: 'Rubik', sans-serif;
-            font-size: 50px;
-            color: $text-waterGreen;
-        }
-    }
-    
-    #separator1, #separator2{
-        height: 4px;
-        border-radius: 10px;
-        background: $bg-gradient-yellow-green;  
-    }
-
-    #separator1{
-        width: 15px;
-    }
-    
-    #separator2{
-        width: 35px;
-    }
-    
-    button{
-        padding: 13px 40px;
-        border: none;
-        border-radius: 50px;
-        font-size: small;
-        background: $bg-gradient-yellow-green;  
-        box-shadow: 2px 2px 15px $text-waterGreen;
-    }
     
     p{
         color: #535252;

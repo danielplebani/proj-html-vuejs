@@ -1,23 +1,30 @@
 <script>
+
+import ExampleProjects from '../componentsChild/ExampleProjects.js';
+import AppSeparator from './utility/AppSeparator.vue';
+
 export default{
     name: 'MainExample',
+
+    components: {
+        AppSeparator
+    },
 
     data(){
         return{
             mouseOver: true,
+            ExampleProjects
         }
     }
 }
 </script>
 
+
 <template>
     <div class="d-flex flex-column align-items-center">
       <div class="d-flex">
         <div class="col-6">
-            <div class="d-flex mb-5">
-              <div id="separator1" class="me-2"></div>
-              <div id="separator2"></div>
-            </div>
+            <AppSeparator class="mb-3"></AppSeparator>
 
             <h2>
               Our recent <span>web design</span> & <br>
@@ -25,10 +32,7 @@ export default{
               past <span>projects</span>
             </h2>
 
-            <div class="d-flex mt-5">
-              <div id="separator1" class="me-2"></div>
-              <div id="separator2"></div>
-            </div>
+            <AppSeparator class="mt-3"></AppSeparator>
         </div>
 
         <div class="col-6">
@@ -36,63 +40,16 @@ export default{
         </div>
       </div>
 
+
       <div class="d-flex justify-content-center flex-wrap gap-1 my-5 position-relative">
-        <div class="projects">
-            <img src="../assets/img/ina-soulis-227104-unsplash-1024x1024.jpg">
+
+        <div class="projects" v-for="example in ExampleProjects">
+            <img :src="example.img">
             <div class="infoImg">
-                <h5>A simple bouquet of red flowers</h5>
-                <span>BOUQUET</span>
+                <h5>{{example.caption}}</h5>
+                <span>{{example.title}}</span>
             </div>
-        </div>
-        <div class="projects">
-            <img src="../assets/img/sunisa-misa-531163-unsplash-1024x1024.jpg">
-            <div class="infoImg">
-                <h5>A famous Ferris Whell</h5>
-                <span>MARKETING</span>
-            </div>
-        </div>
-        <div class="projects">
-            <img src="../assets/img/scarpegialle.jpeg">
-            <div class="infoImg">
-                <h5>A high yellow shoes</h5>
-                <span>YELLOW SHOES</span>
-            </div>
-        </div>
-        <div class="projects">
-            <img src="../assets/img/photo-1448932252197-d19750584e56-1024x1024.jpg">
-            <div class="infoImg">
-                <h5>A simple office work</h5>
-                <span>OFFICE</span>
-            </div>
-        </div>
-        <div class="projects">
-            <img src="../assets/img/origami.avif">
-            <div class="infoImg">
-                <h5>A lot of origami boat shape</h5>
-                <span>ORIGAMI</span>
-            </div>
-        </div>
-        <div class="projects">
-            <img src="../assets/img/mongolfiera.jpg">
-            <div class="infoImg">
-                <h5>A fantastic hot air balloon</h5>
-                <span>HOT AIR BALLOON</span>
-            </div>
-        </div>
-        <div class="projects">
-            <img src="../assets/img/cozy-sofa-in-living-room-PQR5AB9-1024x1024.jpg">
-            <div class="infoImg">
-                <h5>A white officee in living room</h5>
-                <span>SOFA</span>
-            </div>
-        </div>
-        <div class="projects">
-            <img src="../assets/img/cody-davis-253928-unsplash-1024x1024.jpg">
-            <div class="infoImg">
-                <h5>A particular orange blue</h5>
-                <span>BLUE ORANGE</span>
-            </div>
-        </div>
+        </div> 
         
 
         <div id="quickCommands" class="d-flex flex-column">
@@ -114,13 +71,14 @@ export default{
 
       </div>
 
+
         <button class="greenButton text-white me-5" @mouseenter="mouseOver = false"  @mouseleave="mouseOver = true">
             <span v-if="mouseOver">READ MORE</span>
             <span v-if="mouseOver == false">VIEW ALL</span>
         </button>
-
     </div>
 </template>
+
 
 <style lang="scss" scoped>
 
@@ -213,15 +171,9 @@ p{
             margin-right: 5px;
         }
     }
-}
 
-.greenButton{
-    width: 10%;
-    padding: 13px 30px;
-    border: none;
-    border-radius: 50px;
-    font-size: small;
-    background: $bg-gradient-yellow-green;  
-    box-shadow: 2px 2px 15px $text-waterGreen;
+    button:hover {
+    transform: translateX(-50px);
+    }
 }
 </style>

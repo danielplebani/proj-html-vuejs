@@ -1,9 +1,55 @@
 @use "../node_modules/bootstrap/scss/bootstrap.scss";
 
+@use '../src/assets/colors/AppColors.scss' as *;
+
 #AppHeader{
     height: 15vh;
 }
 
 body{
     overflow-x: hidden;
+}
+
+
+//utility
+h2, h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 50px;
+
+    span{
+        font-family: 'Rubik', sans-serif;
+        font-size: 50px;
+        color: $text-waterGreen;
+    }
+}
+
+.greenButton{
+    padding: 13px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: small;
+    background: $bg-gradient-yellow-green;  
+    box-shadow: 2px 2px 15px $text-waterGreen;
+}
+
+.greenButton:hover{
+    box-shadow: 0 0 30px $text-waterGreen;
+}
+
+.blackButton{
+    border: none;
+    padding: 13px 40px;
+    font-size: small;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background: $bg-gradient-white_black;
+    color: $text-white_70;
+}
+
+.blackButton:hover{
+    box-shadow: 0 0 30px black;
+}
+
+.bg-gradient-yellow-green{
+    background: $bg-gradient-yellow-green;  
 }

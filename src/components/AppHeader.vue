@@ -1,7 +1,53 @@
 <script>
+import HeaderNav from '../componentsFather/HeaderNav.vue';
 
 export default{
     name: 'AppHeader',
+
+    data(){
+        return{
+            navigation:[
+    {
+        text: 'HOME',
+        active: true
+    },
+    {
+        text: 'ABOUT',
+        active: false
+    },
+    {
+        text: 'SERVICES',
+        active: false
+    },
+    {
+        text: 'SHOWCASE',
+        active: false
+    },
+    {
+        text: 'BLOG',
+        active: false
+    },
+    {
+        text: 'CONTACT',
+        active: false
+    }
+            ]
+        }
+    },
+
+    components:{
+        HeaderNav
+    },
+
+    methods:{
+        activePage(index){
+            this.navigation.forEach((item) =>{
+                item.active = false;
+            })
+
+            this.navigation[index].active = true;
+        }
+    }
 }
 </script>
 
@@ -24,16 +70,11 @@ export default{
             </div>
 
             <div class="col-4 d-flex justify-content-around">
-                <span><strong>HOME</strong></span>
-                <span>ABOUT</span>
-                <span>SERVICES</span>
-                <span>SHOWCASE</span>
-                <span>BLOG</span>
-                <span>CONTACT</span>
+                <HeaderNav v-for="(page, index) in navigation" :class="page.active ? 'pageSelected' : ''" @click="activePage(index)" :text="page.text"></HeaderNav>
             </div>
 
             <div class="col-3 d-flex justify-content-end align-items-center">
-                <button class="text-white me-5">PURCHASE</button>
+                <button class="greenButton text-white me-5">PURCHASE</button>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
@@ -59,26 +100,15 @@ export default{
 #HeaderBody{
     height: 75%;
     padding: 0 60px;
+    z-index: 2;
+    background-color: white;
+
+    .pageSelected{
+        font-weight: bold;
+    }
 
     img{
         width: 50%;
-    }
-
-    span{
-        font-size: small;
-        color: $text-white_70;
-        font-family: 'AR One Sans', sans-serif;
-        cursor: pointer;
-    }
-
-    button{
-        padding: 13px 40px;
-        border: none;
-        border-radius: 50px;
-        font-size: small;
-        background: rgb(152,225,94);
-        background: $bg-gradient-yellow-green;  
-        box-shadow: 2px 2px 15px $text-waterGreen;
     }
 
     i{

@@ -14,7 +14,7 @@ export default{
 
                 <form class="container-fluid py-1">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Enter yor email address">
+                    <input type="text" class="form-control text-white" placeholder="Enter yor email address">
                     <span class="input-group-text">SUBMIT</span>
                   </div>
                 </form>
@@ -39,6 +39,7 @@ export default{
         </div>
     </div>
 </template>
+
 
 <style lang="scss" scoped>
 
@@ -96,16 +97,6 @@ export default{
         font-size: small;
         font-family: 'Rubik', sans-serif;
     }
-}
-
-.blackButton{
-    border: none;
-    padding: 13px 40px;
-    font-size: small;
-    color: $text-white_70;
-    border-radius: 50px;
-    box-shadow: 0 0 20px $shadow-black;
-    background: $bg-gradient-white_black;
 }
 
 img{

@@ -21,6 +21,7 @@ export default{
     
 </template>
 
+
 <style lang="scss" scoped>
 
 @use '../assets/colors/AppColors.scss' as *;

@@ -39,10 +39,15 @@ export default{
 
 #MainPresentation{
     background-color: $bg-white;
+    display: flex;
+    align-items: center;
 }
 
 #MainServices{
     padding: 10rem 10px;
+    background-color: white;
+    position: absolute; 
+    z-index: 1;
 }
 
 #MainLearnMore{

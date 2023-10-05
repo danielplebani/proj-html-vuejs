@@ -1,12 +1,25 @@
 <script>
+
+import servicesCard from '../componentsChild/ServicesCard.js';
+import AppSeparator from './utility/AppSeparator.vue';
+
 export default{
     name: 'MainServices',
+
+    components: {
+        AppSeparator
+    },
+
+    data(){
+        return{
+            servicesCard
+        }
+    }
 }
 </script>
 
 <template>
-    <div>
-      <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center">
       <div class="col-5">
         <h2>
             We Are Here To <br>
@@ -15,39 +28,17 @@ export default{
             And Stylish!
         </h2>
 
-        <div class="d-flex mt-4 mb-5">
-            <div id="separator1" class="me-2"></div>
-            <div id="separator2"></div>
-        </div>
+        <AppSeparator class="my-4"></AppSeparator>
 
-        <button class="text-white me-5">VIEW ALL</button>
+        <button class="greenButton text-white me-5">VIEW ALL</button>
       </div>
 
       <div class="col-7 d-flex justify-content-between flex-wrap gap-3">
-        <div class="card">
-            <i class="fa-solid fa-gauge"></i>
-            <h4>Speed Optimizazion</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
+        <div class="card" v-for="card in servicesCard">
+            <div v-html="card.icon"></div>
+            <h4>{{card.title}}</h4>
+            <p>{{card.text}}</p>
         </div>
-
-        <div class="card">
-            <i class="fa-solid fa-cloud"></i>
-            <h4>Cloud Solutions</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
-        </div>
-
-        <div class="card">
-            <i class="fa-solid fa-mobile-screen"></i>
-            <h4>Website Design</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
-        </div>
-
-        <div class="card">
-            <i class="fa-regular fa-clock"></i>
-            <h4>Online Marketing</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, dolores sapiente incidunt repudiandae obcaecati.</p>
-        </div>
-      </div>
       </div>
     </div>
 </template>
@@ -58,40 +49,6 @@ export default{
 
 .col-5{
     padding: 3rem 0;
-}
-
-h2{
-    font-family: 'Rubik', sans-serif;
-    font-size: 50px;
-
-    span{
-        font-family: 'Rubik', sans-serif;
-        font-size: 50px;
-        color: $text-waterGreen;
-    }
-}
-
-#separator1, #separator2{
-    height: 4px;
-    border-radius: 10px;
-    background: $bg-gradient-yellow-green;  
-}
-
-#separator1{
-    width: 15px;
-}
-
-#separator2{
-    width: 35px;
-}
-
-button{
-    padding: 13px 40px;
-    border: none;
-    border-radius: 50px;
-    font-size: small;
-    background: $bg-gradient-yellow-green;  
-    box-shadow: 2px 2px 15px $text-waterGreen;
 }
 
 .card{
@@ -105,8 +62,8 @@ button{
     justify-content: space-between;
     cursor: pointer;
 
-    i{
-        font-size: 50px;
+    div{
+        font-size: 40px;
     }
 
     h4{
