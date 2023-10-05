@@ -19,8 +19,8 @@ export default{
 <template>
     <div class="d-flex align-items-center">
         <div class="col-7">
-            <img src="../assets/img/123.jpeg" id="original-img-bg">
-            <img src="../assets/img/123.jpeg" id="cut-img-bg">
+            <img src="../assets/img/123.png" id="original-img-bg">
+            <img src="../assets/img/123.png" id="cut-img-bg">
             
             <div id="original-greenScreen"></div>
             <div id="cut-greenScreen"></div>
@@ -58,6 +58,8 @@ export default{
 
     #original-img-bg{
         position: absolute;
+        width: 608px;
+        height: 406px;
         left: -100px;
         border-radius: 35px;
         clip-path: polygon(0 0, 100% 0, 100% 70.5%, 0 70.5%);
@@ -65,6 +67,8 @@ export default{
 
     #cut-img-bg{
         position: absolute;
+        width: 608px;
+        height: 406px;
         left: -130px;
         border-radius: 35px;
         clip-path: polygon(0 70.5%, 100% 70.5%, 100% 100%, 0 100%);
@@ -77,7 +81,7 @@ export default{
         position: absolute;
         left: -100px;
         border-radius: 35px;
-        background: $bg-gradient-yellow-green; 
+        background: linear-gradient(106deg, rgba(152,225,94,0.7) 2%, rgba(142,225,99,0.7) 18%, rgba(96,222,121,0.7) 41%, rgba(64,220,135,0.7) 57%, rgba(29,219,153,0.7) 85%, rgba(0,217,166,0.7));
     }
 
     #cut-greenScreen{
@@ -87,7 +91,7 @@ export default{
         position: absolute;
         left: -130px;
         border-radius: 35px;
-        background: $bg-gradient-yellow-green; 
+        background: linear-gradient(106deg, rgba(152,225,94,0.7) 2%, rgba(142,225,99,0.7) 18%, rgba(96,222,121,0.7) 41%, rgba(64,220,135,0.7) 57%, rgba(29,219,153,0.7) 85%, rgba(0,217,166,0.7));
     }
 
     #original-img{
